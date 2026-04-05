@@ -32,7 +32,8 @@ async function fetchFormats(url, cookiePath) {
     '--no-playlist',
     '--no-download',
     '--ignore-errors',
-    '--js-runtimes', 'node'
+    '--js-runtimes', 'node',
+    '--remote-components', 'ejs:github'
   ];
 
   if (cookiePath) {
@@ -183,7 +184,8 @@ async function runDownload(job, { cookiePath, subtitleLangs, subtitleFormat }) {
     '-o', path.join(DOWNLOADS_DIR, '%(title).120s [%(id)s].%(ext)s'),
     '--print', 'after_move:filepath',
     '--concurrent-fragments', '4', // Faster downloads
-    '--js-runtimes', 'node'
+    '--js-runtimes', 'node',
+    '--remote-components', 'ejs:github'
   ];
 
   if (cookiePath) {
