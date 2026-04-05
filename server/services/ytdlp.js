@@ -33,7 +33,8 @@ async function fetchFormats(url, cookiePath) {
     '--no-download',
     '--ignore-errors',
     '--js-runtimes', 'node',
-    '--remote-components', 'ejs:github'
+    '--remote-components', 'ejs:github',
+    '--extractor-args', 'youtube:player_client=ios,android,web'
   ];
 
   if (cookiePath) {
@@ -185,7 +186,8 @@ async function runDownload(job, { cookiePath, subtitleLangs, subtitleFormat }) {
     '--print', 'after_move:filepath',
     '--concurrent-fragments', '4', // Faster downloads
     '--js-runtimes', 'node',
-    '--remote-components', 'ejs:github'
+    '--remote-components', 'ejs:github',
+    '--extractor-args', 'youtube:player_client=ios,android,web'
   ];
 
   if (cookiePath) {
