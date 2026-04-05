@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>yt-dlp GUI — Media Downloader</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Animated background -->
+  <div class="bg-animation">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+
+  <div class="app-container">
+    <!-- Header -->
+    <header class="app-header">
+      <div class="logo-section">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="5 3 19 12 5 21 5 3"/>
+          </svg>
+        </div>
+        <div>
+          <h1 class="app-title">yt-dlp GUI</h1>
+          <p class="app-subtitle">Universal Media Downloader</p>
+        </div>
+      </div>
+      <div class="header-status">
+        <span class="status-dot" id="serverStatus"></span>
+        <span class="status-text" id="serverStatusText">Connecting...</span>
+      </div>
+    </header>
+
+    <!-- Platform badges -->
+    <div class="platform-badges">
+      <div class="platform-badge youtube" title="YouTube">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+          <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+        </svg>
+        <span>YouTube</span>
+      </div>
+      <div class="platform-badge instagram" title="Instagram">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+        </svg>
+        <span>Instagram</span>
+      </div>
+      <div class="platform-badge twitter" title="Twitter / X">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+          <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+        </svg>
+        <span>X</span>
+      </div>
+      <div class="platform-badge facebook" title="Facebook">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+          <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+        </svg>
+        <span>Facebook</span>
+      </div>
+      <div class="platform-badge generic" title="1000+ sites supported">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+        </svg>
+        <span>+1000</span>
+      </div>
+    </div>
+
+    <!-- Main content area -->
+    <main class="main-content">
+      <!-- URL Input Card -->
+      <section class="glass-card url-card">
+        <div class="card-header">
+          <h2 class="card-title">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            Media URL
+          </h2>
+        </div>
+        <div class="url-input-group">
+          <input
+            type="url"
+            id="urlInput"
+            class="url-input"
+            placeholder="Paste video or audio URL here..."
+            autocomplete="off"
+            spellcheck="false"
+          />
+          <button id="fetchBtn" class="btn btn-primary" disabled>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+            Fetch
+          </button>
+        </div>
+
+        <!-- Cookie upload -->
+        <div class="cookie-section">
+          <button id="cookieToggle" class="btn btn-ghost">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span id="cookieLabel">Upload cookies.txt</span>
+            <span id="cookieStatus" class="cookie-status hidden"></span>
+          </button>
+          <input type="file" id="cookieFile" accept=".txt" class="hidden" />
+          <div id="cookieInfo" class="cookie-info hidden"></div>
+        </div>
+      </section>
+
+      <!-- Loading state -->
+      <div id="loadingState" class="glass-card hidden">
+        <div class="loading-spinner">
+          <div class="spinner"></div>
+          <p>Fetching available formats...</p>
+        </div>
+      </div>
+
+      <!-- Video Info Card -->
+      <section id="videoInfoCard" class="glass-card hidden">
+        <div class="video-info">
+          <img id="videoThumb" class="video-thumb" src="" alt="" />
+          <div class="video-meta">
+            <h3 id="videoTitle" class="video-title"></h3>
+            <div class="video-details">
+              <span id="videoDuration" class="video-detail-badge">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </span>
+              <span id="videoUploader" class="video-detail-badge">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Format Selection Card -->
+      <section id="formatCard" class="glass-card hidden">
+        <div class="card-header">
+          <h2 class="card-title">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            Select Format
+          </h2>
+          <div class="format-filters" style="display: none;">
+            <!-- Hidden filters to keep DOM structure for JS compatibility if needed, or JS will just not throw if we keep them but hide them -->
+          </div>
+        </div>
+
+        <!-- Selection summary -->
+        <div id="selectionSummary" class="selection-summary hidden">
+          <div class="summary-content">
+            <span id="selectionText">No format selected</span>
+            <button id="clearSelection" class="btn btn-ghost btn-sm">Clear</button>
+          </div>
+        </div>
+
+        <!-- Formats Table -->
+        <div id="formatsTableContainer" class="formats-table-container">
+          <table class="formats-table">
+            <thead>
+              <tr>
+                <th style="width: 30px;"></th>
+                <th>ID</th>
+                <th>EXT</th>
+                <th>RESOLUTION</th>
+                <th>FPS</th>
+                <th class="align-right">FILESIZE</th>
+                <th>TBR</th>
+                <th>PROTO</th>
+                <th>VCODEC</th>
+                <th>VBR</th>
+                <th>ACODEC</th>
+                <th>MORE INFO</th>
+              </tr>
+            </thead>
+            <tbody id="formatsTableBody">
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Download button -->
+        <div class="download-actions">
+          <button id="downloadBtn" class="btn btn-download" disabled>
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download
+          </button>
+        </div>
+      </section>
+
+      <!-- Download Progress Card -->
+      <section id="progressCard" class="glass-card hidden">
+        <div class="card-header">
+          <h2 class="card-title">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Downloading
+          </h2>
+          <span id="progressStage" class="stage-badge stage-downloading">Starting...</span>
+        </div>
+
+        <div class="progress-content">
+          <p id="progressFilename" class="progress-filename"></p>
+
+          <div class="progress-bar-container">
+            <div id="progressBar" class="progress-bar" style="width: 0%">
+              <div class="progress-bar-glow"></div>
+            </div>
+          </div>
+
+          <div class="progress-stats">
+            <div class="stat">
+              <span class="stat-label">Progress</span>
+              <span id="progressPercent" class="stat-value">0%</span>
+            </div>
+            <div class="stat">
+              <span class="stat-label">Speed</span>
+              <span id="progressSpeed" class="stat-value">--</span>
+            </div>
+            <div class="stat">
+              <span class="stat-label">Size</span>
+              <span id="progressSize" class="stat-value">--</span>
+            </div>
+            <div class="stat">
+              <span class="stat-label">ETA</span>
+              <span id="progressEta" class="stat-value">--:--</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Error display -->
+      <div id="errorToast" class="error-toast hidden">
+        <div class="error-icon">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+        </div>
+        <span id="errorText"></span>
+        <button id="errorDismiss" class="btn-icon">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+
+      <!-- Success toast -->
+      <div id="successToast" class="success-toast hidden">
+        <div class="success-icon">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <span id="successText">Download complete!</span>
+        <a id="successDownloadLink" href="#" class="btn btn-sm btn-success" download>Save File</a>
+        <button id="successDismiss" class="btn-icon">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+
+      <!-- Download History -->
+      <section class="glass-card history-card">
+        <div class="card-header">
+          <h2 class="card-title">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Recent Downloads
+          </h2>
+          <button id="clearHistory" class="btn btn-ghost btn-sm">Clear All</button>
+        </div>
+        <div id="historyList" class="history-list">
+          <p class="history-empty">No downloads yet</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+      <p>Powered by <a href="https://github.com/yt-dlp/yt-dlp" target="_blank" rel="noopener">yt-dlp</a> &bull; Works with 1000+ sites</p>
+    </footer>
+  </div>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>

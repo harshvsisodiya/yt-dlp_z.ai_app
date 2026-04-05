@@ -1,0 +1,119 @@
+[
+  {
+    "id": "d6815e5e-6430-40f5-a2dc-db9ef45b3fcf",
+    "url": "https://www.youtube.com/watch?v=-8C_2BBVWk8&pp=ygUFc29uZ3M%3D",
+    "videoFormatId": "609",
+    "audioFormatId": "234",
+    "status": "completed",
+    "startTime": 1775394946305,
+    "addedAt": 1775394946305,
+    "filename": "KK ｜ Zara Sa - Audio Lyrical ｜ Emraan Hashmi ｜ Sonal Chauhan ｜ Pritam ｜ Sayeed Quadri ｜ Jannat [-8C_2BBVWk8].f270.mp4.part-Frag20.part",
+    "filesize": 904127,
+    "completedAt": 1775395059617
+  },
+  {
+    "id": "37b1503e-2867-4a2d-af8d-fbd6834141c7",
+    "url": "https://www.youtube.com/watch?v=-8C_2BBVWk8&pp=ygUFc29uZ3M%3D",
+    "videoFormatId": "270",
+    "audioFormatId": "234",
+    "status": "error",
+    "startTime": 1775394936528,
+    "addedAt": 1775394936528,
+    "error": "yt-dlp exited with code 1",
+    "completedAt": 1775395074426
+  },
+  {
+    "id": "58378910-ff83-4113-b6e5-a2e5b9354381",
+    "url": "https://www.youtube.com/watch?v=-8C_2BBVWk8&pp=ygUFc29uZ3M%3D",
+    "videoFormatId": "270",
+    "audioFormatId": "234",
+    "status": "error",
+    "startTime": 1775394859038,
+    "addedAt": 1775394859039,
+    "error": "yt-dlp exited with code 1",
+    "completedAt": 1775394895738
+  },
+  {
+    "id": "ad3731e4-aa16-4ca7-9ed1-2bb272c6b859",
+    "url": "https://www.youtube.com/watch?v=QGU24-NpCH4&pp=ygUFc29uZ3M%3D",
+    "videoFormatId": "270",
+    "audioFormatId": "233",
+    "status": "completed",
+    "startTime": 1775394198525,
+    "addedAt": 1775394198525,
+    "filename": "Guru Randhawa：  ＂Khat＂ Full Video Song ｜ Ikka ｜ New Punjabi Song [QGU24-NpCH4].mp4",
+    "filesize": 43766500,
+    "completedAt": 1775394260990
+  },
+  {
+    "id": "544bb9fb-58df-4dc9-b2bd-dc2081084b00",
+    "url": "https://www.youtube.com/watch?v=QGU24-NpCH4&pp=ygUFc29uZ3M%3D",
+    "videoFormatId": "270",
+    "audioFormatId": "234",
+    "status": "completed",
+    "startTime": 1775393418132,
+    "addedAt": 1775393418132,
+    "filename": "Guru Randhawa：  ＂Khat＂ Full Video Song ｜ Ikka ｜ New Punjabi Song [QGU24-NpCH4].mp4",
+    "filesize": 46509008,
+    "completedAt": 1775393513011
+  },
+  {
+    "id": "5875484a-fae8-4e78-b191-ddee42ad98f6",
+    "url": "https://www.youtube.com/watch?v=ZeaqjybbzzM&pp=ygUFc29uZ3M%3D",
+    "videoFormatId": "232",
+    "audioFormatId": "234",
+    "status": "completed",
+    "startTime": 1775393092393,
+    "addedAt": 1775393092393,
+    "filename": "WARNING (Official Video) ｜ Masoom Sharma ｜ Malika Kaliraman ｜ Haryanvi Songs Haryanavi 2025 [ZeaqjybbzzM].mp4",
+    "filesize": 25425217,
+    "completedAt": 1775393137863
+  },
+  {
+    "id": "09e48597-1484-400f-b8e4-8e48fe2b0bd2",
+    "url": "https://www.youtube.com/watch?v=uuCFRaFWjwY&pp=ygUFc29uZ3M%3D",
+    "videoFormatId": "603",
+    "audioFormatId": "234",
+    "status": "completed",
+    "startTime": 1775392681278,
+    "addedAt": 1775392681278,
+    "filename": "Imran Khan - Amplifier (Official Music Video) [uuCFRaFWjwY].mp4",
+    "filesize": 5874598,
+    "completedAt": 1775392709946
+  },
+  {
+    "id": "1f023e22-ab24-4476-b55b-25927e24b0cd",
+    "url": "https://www.youtube.com/watch?v=xBWoibxZs_o&pp=ygUFc29uZ3M%3D",
+    "videoFormatId": "231",
+    "audioFormatId": "234",
+    "status": "completed",
+    "startTime": 1775392260923,
+    "addedAt": 1775392260923,
+    "filename": "Meri Mehbuba [xBWoibxZs_o].mp4",
+    "filesize": 5578011,
+    "completedAt": 1775392279567
+  },
+  {
+    "id": "12642f6f-de88-4540-8187-05c1ff694407",
+    "url": "https://youtu.be/14u7whT6Vdk",
+    "videoFormatId": "603",
+    "audioFormatId": "234-0",
+    "status": "completed",
+    "startTime": 1775392071683,
+    "addedAt": 1775392071683,
+    "filename": "We Got Him： Trump Confirms F-15 Pilot Rescued from Iran ｜ Daring US Mission ｜ by Ankit Sir [14u7whT6Vdk].mp4",
+    "filesize": 19923072,
+    "completedAt": 1775392125095
+  },
+  {
+    "id": "ae6a24c0-5520-40d5-b922-6b376cda51f1",
+    "url": "https://youtu.be/14u7whT6Vdk",
+    "videoFormatId": "602",
+    "audioFormatId": null,
+    "status": "error",
+    "startTime": 1775387628776,
+    "addedAt": 1775387628776,
+    "error": "yt-dlp exited with code 1",
+    "completedAt": 1775387665340
+  }
+]
