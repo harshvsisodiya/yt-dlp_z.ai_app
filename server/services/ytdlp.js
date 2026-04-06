@@ -32,8 +32,6 @@ async function fetchFormats(url, cookiePath) {
     '--no-playlist',
     '--no-download',
     '--ignore-errors',
-    '--js-runtimes', 'node',
-    '--remote-components', 'ejs:github',
     '--extractor-args', 'youtube:player_client=ios,android,web'
   ];
 
@@ -185,8 +183,6 @@ async function runDownload(job, { cookiePath, subtitleLangs, subtitleFormat }) {
     '-o', path.join(DOWNLOADS_DIR, '%(title).120s [%(id)s].%(ext)s'),
     '--print', 'after_move:filepath',
     '--concurrent-fragments', '4', // Faster downloads
-    '--js-runtimes', 'node',
-    '--remote-components', 'ejs:github',
     '--extractor-args', 'youtube:player_client=ios,android,web'
   ];
 
